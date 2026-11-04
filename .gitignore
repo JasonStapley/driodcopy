@@ -1,0 +1,3 @@
+/target
+copy_logs.db
+**/*.rs.bk
