@@ -4,6 +4,14 @@ Concurrent directory copier for Windows 11, with the same idea as a small slice 
 
 The original Go program is kept in [`go/main.go`](go/main.go) for comparison. This crate is the supported implementation.
 
+## Windows 11 setup
+1. Download **rustup-init.exe (64-bit)** from https://rust-lang.org/tools/install. Edge may flag it as "not commonly downloaded". If so, choose **Keep > Keep anyway**. If SmartScreen appears, choose **More info > Run anyway**.
+2. Run it with the default install (MSVC toolchain), and accept the offer to install the Visual Studio C++ Build Tools.
+3. Open a **new** terminal so PATH picks up `%USERPROFILE%\.cargo\bin`. If `cargo` still isn't recognised, add that folder to your user PATH.
+4. Check the install with `cargo --version`, then build with `cargo build --release`. The binary ends up at `target\release\driodcopy.exe`.
+
+Optional: VS Code with the **rust-analyzer** and **CodeLLDB** extensions.
+
 ## Build
 
 ```bash
